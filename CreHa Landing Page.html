@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreHA Construcción Residencial | Casas a la medida en Monterrey</title>
+    <meta name="description" content="Construimos tu casa en Monterrey desde el terreno hasta el detalle final. Más de 10 proyectos entregados en zona Carretera Nacional y Santiago.">
+    <meta name="keywords" content="construcción residencial monterrey, casas a medida, constructora monterrey, proyectos residenciales, casas llave en mano">
+    <meta name="theme-color" content="#1a1819">
+
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="CreHA Construcción Residencial | Casas a la medida en Monterrey">
+    <meta property="og:description" content="Construimos casas residenciales desde el terreno hasta el detalle final. Más de 10 proyectos en Carretera Nacional y Santiago.">
+    <meta property="og:url" content="https://creha.com.mx">
+    <meta property="og:image" content="https://creha.com.mx/og-image.jpg">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CreHA Construcción Residencial | Casas a medida">
+    <meta name="twitter:description" content="Construimos tu casa en Monterrey desde el terreno hasta el final">
+    <meta name="twitter:image" content="https://creha.com.mx/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://creha.com.mx">
+
+    <!-- ============================================
+         GOOGLE ANALYTICS (REEMPLAZAR G-XXXXXXXXXX)
+    ============================================ -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- ============================================
+         FACEBOOK PIXEL (REEMPLAZAR XXXXXXXXXXXXXXX)
+    ============================================ -->
+    <!-- <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script> -->
+
+    <!-- Fuentes: Cormorant Garamond (display elegante) + Inter (cuerpo limpio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           VARIABLES DE COLOR Y TIPOGRAFÍA
+           Paleta alineada al logo CreHA: negro + ámbar
+        ============================================ */
+        :root {
+            --color-bg: #faf7f2;
+            --color-bg-warm: #f0ebe1;
+            --color-ink: #211f20;
+            --color-ink-soft: #4a4647;
+            --color-forest: #1a1819;       /* negro carbón del logo */
+            --color-forest-dark: #0e0d0d;  /* negro profundo */
+            --color-gold: #faae40;         /* ámbar EXACTO del logo */
+            --color-gold-soft: #fcc06d;    /* ámbar suavizado */
+            --color-gold-dark: #d8902e;    /* ámbar oscurecido para hover */
+            --color-line: rgba(33, 31, 32, 0.12);
+            --color-white: #ffffff;
+
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+
+            --max-width: 1280px;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+        }
+
+        /* ============================================
+           RESET Y BASE
+        ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-ink);
+            background: var(--color-bg);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* ============================================
+           NAVEGACIÓN
+        ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 0;
+            background: rgba(245, 241, 234, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease, padding 0.3s ease;
+        }
+
+        .nav.scrolled {
+            border-bottom-color: var(--color-line);
+            padding: 0.875rem 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--color-forest);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--color-ink-soft);
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover { color: var(--color-gold); }
+
+        .nav-cta {
+            padding: 0.65rem 1.5rem;
+            background: var(--color-forest);
+            color: var(--color-bg);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: background 0.2s ease;
+        }
+
+        .nav-cta:hover { background: var(--color-gold); color: var(--color-forest-dark); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* ============================================
+           HERO
+        ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 8rem 0 4rem;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 20%, rgba(176, 141, 74, 0.08), transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(44, 62, 45, 0.06), transparent 50%);
+            z-index: 0;
+        }
+
+        .hero-grain {
+            position: absolute;
+            inset: 0;
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero-eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--color-forest-dark);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-gold);
+            font-weight: 300;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-ink-soft);
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2rem;
+            background: var(--color-forest);
+            color: var(--color-bg);
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-forest);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-forest-dark);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2rem;
+            background: transparent;
+            color: var(--color-forest);
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 1px solid var(--color-forest);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-forest);
+            color: var(--color-bg);
+        }
+
+        /* Composición visual del hero (placeholder de proyecto) */
+        .hero-visual {
+            position: relative;
+            aspect-ratio: 4/5;
+            max-height: 620px;
+        }
+
+        .hero-img-main {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #2a2727 0%, #0e0d0d 100%);
+            overflow: hidden;
+        }
+
+        /* SVG decorativo: silueta arquitectónica minimalista */
+        .hero-img-main::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='400' height='500' fill='%230e0d0d'/%3E%3Cg opacity='0.18' stroke='%23faae40' stroke-width='0.6' fill='none'%3E%3Cpath d='M50 350 L50 200 L150 150 L250 200 L350 180 L350 350 Z'/%3E%3Cpath d='M50 350 L350 350 L350 450 L50 450 Z'/%3E%3Cpath d='M120 350 L120 280 L180 280 L180 350'/%3E%3Cpath d='M220 350 L220 250 L290 250 L290 350'/%3E%3Cline x1='0' y1='450' x2='400' y2='450'/%3E%3Cline x1='0' y1='460' x2='400' y2='460'/%3E%3C/g%3E%3Cg opacity='0.1' fill='%23faae40'%3E%3Ccircle cx='320' cy='100' r='40'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Hero accent removed — cleaner visual hierarchy */
+
+        /* Hero stat removed — info already in paragraph to avoid redundancy */
+
+        /* ============================================
+           SECCIÓN BASE
+        ============================================ */
+        section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .section-eyebrow::before {
+            content: "";
+            width: 24px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--color-forest-dark);
+            max-width: 720px;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--color-gold);
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--color-ink-soft);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ============================================
+           GALERÍA DE PROYECTOS
+        ============================================ */
+        .projects {
+            background: var(--color-bg-warm);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+            margin-top: var(--space-md);
+        }
+
+        .project {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--color-forest);
+            border: none;
+            padding: 0;
+            text-align: left;
+            transition: transform 0.2s ease;
+        }
+
+        .project:hover { transform: scale(1.02); }
+
+        .project-img {
+            aspect-ratio: 4/3;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .project:hover .project-img { transform: scale(1.04); }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(31, 44, 32, 0.95), transparent);
+            color: var(--color-bg);
+            transform: translateY(20px);
+            opacity: 0.92;
+            transition: all 0.3s ease;
+        }
+
+        .project:hover .project-info { transform: translateY(0); opacity: 1; }
+
+        .project-title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-meta {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold-soft);
+        }
+
+        .project:nth-child(1) { grid-column: span 7; }
+        .project:nth-child(2) { grid-column: span 5; }
+        .project:nth-child(3) { grid-column: span 5; }
+        .project:nth-child(4) { grid-column: span 4; }
+        .project:nth-child(5) { grid-column: span 3; }
+
+        @media (max-width: 768px) {
+            .project { grid-column: span 12 !important; }
+        }
+
+        /* Placeholders de proyecto con SVG diferentes */
+        .project-1 .project-img { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%231a1819'/%3E%3Cg opacity='0.22' stroke='%23faae40' stroke-width='1' fill='none'%3E%3Cpath d='M100 450 L100 250 L300 180 L500 220 L700 200 L700 450 Z'/%3E%3Cpath d='M150 450 L150 350 L240 350 L240 450 M280 450 L280 320 L380 320 L380 450 M450 450 L450 280 L580 280 L580 450'/%3E%3Cpath d='M300 180 L300 100 M500 220 L500 140'/%3E%3Cline x1='0' y1='480' x2='800' y2='480'/%3E%3Cline x1='0' y1='495' x2='800' y2='495'/%3E%3C/g%3E%3Ccircle cx='650' cy='130' r='45' fill='%23faae40' opacity='0.14'/%3E%3C/svg%3E"); }
+
+        .project-2 .project-img { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%230e0d0d'/%3E%3Cg opacity='0.2' stroke='%23faae40' stroke-width='1' fill='none'%3E%3Crect x='200' y='200' width='400' height='280'/%3E%3Cline x1='200' y1='280' x2='600' y2='280'/%3E%3Cline x1='200' y1='360' x2='600' y2='360'/%3E%3Cline x1='320' y1='200' x2='320' y2='480'/%3E%3Cline x1='480' y1='200' x2='480' y2='480'/%3E%3Cpath d='M180 200 L400 100 L620 200'/%3E%3C/g%3E%3C/svg%3E"); }
+
+        .project-3 .project-img { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%232a2727'/%3E%3Cg opacity='0.22' stroke='%23faae40' stroke-width='1' fill='none'%3E%3Cpath d='M100 480 L100 280 L250 220 L400 280 L400 480 Z M400 480 L400 320 L600 250 L700 280 L700 480 Z'/%3E%3Cline x1='150' y1='480' x2='150' y2='380'/%3E%3Cline x1='200' y1='480' x2='200' y2='380'/%3E%3Cline x1='450' y1='480' x2='450' y2='400'/%3E%3Cline x1='550' y1='480' x2='550' y2='400'/%3E%3C/g%3E%3C/svg%3E"); }
+
+        .project-4 .project-img { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%231a1819'/%3E%3Cg opacity='0.22' stroke='%23faae40' stroke-width='1' fill='none'%3E%3Cpath d='M150 480 L150 200 L650 200 L650 480 Z'/%3E%3Cpath d='M250 200 L250 480 M400 200 L400 480 M550 200 L550 480'/%3E%3Cpath d='M150 320 L650 320'/%3E%3C/g%3E%3Ccircle cx='400' cy='130' r='30' fill='%23faae40' opacity='0.18'/%3E%3C/svg%3E"); }
+
+        .project-5 .project-img { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%230e0d0d'/%3E%3Cg opacity='0.2' stroke='%23faae40' stroke-width='1' fill='none'%3E%3Cpath d='M200 480 L200 250 L600 250 L600 480 Z'/%3E%3Cpath d='M200 250 L400 150 L600 250'/%3E%3Cpath d='M280 480 L280 350 L380 350 L380 480 M450 480 L450 380 L540 380 L540 480'/%3E%3C/g%3E%3C/svg%3E"); }
+
+        /* ============================================
+           CÓMO TRABAJAMOS — 5 PASOS
+        ============================================ */
+        .process {
+            background: var(--color-forest-dark);
+            color: var(--color-bg);
+        }
+
+        .process .section-title { color: var(--color-bg); }
+        .process .section-intro { color: rgba(245, 241, 234, 0.7); }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-top: var(--space-lg);
+            counter-reset: step;
+        }
+
+        @media (max-width: 1000px) {
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .process-grid { grid-template-columns: 1fr; }
+        }
+
+        .step {
+            position: relative;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(201, 168, 102, 0.3);
+            counter-increment: step;
+        }
+
+        .step::before {
+            content: "0" counter(step);
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-style: italic;
+            color: var(--color-gold);
+            font-weight: 300;
+            display: block;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: var(--color-bg);
+        }
+
+        .step-desc {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: rgba(245, 241, 234, 0.75);
+            font-weight: 300;
+        }
+
+        /* ============================================
+           TESTIMONIALES
+        ============================================ */
+        .testimonials {
+            background: var(--color-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: var(--space-md);
+        }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .testimonial {
+            background: var(--color-bg-warm);
+            padding: 2.5rem;
+            position: relative;
+            border-top: 2px solid var(--color-gold);
+        }
+
+        .testimonial::before {
+            content: "“";
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-family: var(--font-display);
+            font-size: 5rem;
+            color: var(--color-gold);
+            opacity: 0.25;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: var(--color-forest-dark);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--color-line);
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--color-forest);
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .testimonial-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-forest-dark);
+        }
+
+        .testimonial-role {
+            font-size: 0.78rem;
+            color: var(--color-ink-soft);
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           LEAD MAGNET — GUÍA DEL CONSTRUCTOR
+        ============================================ */
+        .lead-magnet {
+            background: var(--color-bg-warm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-magnet-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .lead-magnet-inner { grid-template-columns: 1fr; }
+        }
+
+        .lead-magnet-content h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            margin-bottom: 1.5rem;
+            color: var(--color-forest-dark);
+        }
+
+        .lead-magnet-content h2 em {
+            font-style: italic;
+            color: var(--color-gold);
+        }
+
+        .lead-magnet-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .lead-magnet-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--color-line);
+            font-size: 0.95rem;
+            color: var(--color-ink-soft);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .lead-magnet-list li::before {
+            content: "—";
+            color: var(--color-gold);
+            font-weight: 500;
+        }
+
+        /* Mock-up del PDF de la guía */
+        .guide-mockup {
+            position: relative;
+            aspect-ratio: 3/4;
+            max-width: 380px;
+            margin: 0 auto;
+            transform: rotate(-3deg);
+            transition: transform 0.4s ease;
+        }
+
+        .guide-mockup:hover { transform: rotate(0deg) scale(1.02); }
+
+        .guide-cover {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, var(--color-forest) 0%, var(--color-forest-dark) 100%);
+            box-shadow:
+                0 30px 60px rgba(26, 41, 32, 0.25),
+                0 10px 20px rgba(26, 41, 32, 0.15);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: var(--color-bg);
+        }
+
+        .guide-cover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--color-gold);
+        }
+
+        .guide-eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-title {
+            font-family: var(--font-display);
+            font-size: 1.7rem;
+            font-weight: 500;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .guide-title em { font-style: italic; color: var(--color-gold-soft); }
+
+        .guide-subtitle {
+            font-size: 0.85rem;
+            color: rgba(245, 241, 234, 0.7);
+            line-height: 1.5;
+        }
+
+        .guide-bottom {
+            border-top: 1px solid rgba(201, 168, 102, 0.3);
+            padding-top: 1rem;
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--color-gold);
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           FORMULARIO DE CONTACTO
+        ============================================ */
+        .contact {
+            background: var(--color-forest-dark);
+            color: var(--color-bg);
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .contact-info h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--color-bg);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info h2 em {
+            font-style: italic;
+            color: var(--color-gold);
+        }
+
+        .contact-info p {
+            color: rgba(245, 241, 234, 0.75);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-top: 1px solid rgba(201, 168, 102, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .contact-detail:last-child { border-bottom: 1px solid rgba(201, 168, 102, 0.2); }
+
+        .contact-detail-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            min-width: 90px;
+        }
+
+        .form {
+            background: rgba(245, 241, 234, 0.04);
+            padding: 3rem;
+            border: 1px solid rgba(201, 168, 102, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .form { padding: 2rem 1.5rem; }
+        }
+
+        .form-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-bg);
+        }
+
+        .form-subtitle {
+            font-size: 0.88rem;
+            color: rgba(245, 241, 234, 0.65);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: rgba(245, 241, 234, 0.06);
+            border: 1px solid rgba(201, 168, 102, 0.3);
+            color: var(--color-bg);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            background: rgba(245, 241, 234, 0.08);
+        }
+
+        .form-input::placeholder { color: rgba(245, 241, 234, 0.4); }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23faae40' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        .form-select option {
+            background: var(--color-forest-dark);
+            color: var(--color-bg);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .radio-option {
+            flex: 1;
+            position: relative;
+        }
+
+        .radio-option input { position: absolute; opacity: 0; }
+
+        .radio-option label {
+            display: block;
+            text-align: center;
+            padding: 0.9rem;
+            background: rgba(245, 241, 234, 0.06);
+            border: 1px solid rgba(201, 168, 102, 0.3);
+            cursor: pointer;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+        }
+
+        .radio-option input:checked + label {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-forest-dark);
+            font-weight: 500;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--color-gold);
+            color: var(--color-forest-dark);
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            margin-top: 0.5rem;
+        }
+
+        .form-submit:hover:not(:disabled) { background: var(--color-gold-soft); }
+
+        .form-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-note {
+            font-size: 0.78rem;
+            color: rgba(245, 241, 234, 0.5);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        footer {
+            background: var(--color-forest-dark);
+            color: rgba(245, 241, 234, 0.7);
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(201, 168, 102, 0.15);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-bg);
+        }
+
+        .footer-logo span { color: var(--color-gold); }
+
+        /* Íconos de redes sociales */
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(250, 174, 64, 0.1);
+            border: 1px solid rgba(250, 174, 64, 0.3);
+            color: var(--color-gold);
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .social-icon:hover {
+            background: var(--color-gold);
+            color: var(--color-forest-dark);
+            transform: translateY(-2px);
+        }
+
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+        }
+
+        .footer-text {
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           BOTÓN WHATSAPP FLOTANTE
+        ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            z-index: 99;
+            transition: transform 0.3s ease;
+            animation: whatsappPulse 2.5s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--color-forest-dark);
+            color: var(--color-bg);
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .whatsapp-tooltip::after {
+            content: "";
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-style: solid;
+            border-width: 6px 0 6px 6px;
+            border-color: transparent transparent transparent var(--color-forest-dark);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-float { bottom: 1.25rem; right: 1.25rem; width: 56px; height: 56px; }
+        }
+
+        /* ============================================
+           ANIMACIONES DE ENTRADA
+        ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           MODAL LEAD MAGNET
+        ============================================ */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 41, 32, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active { display: flex; }
+
+        /* ============================================
+           MODAL PROYECTO CON CARRUSEL
+        ============================================ */
+        .modal-proyecto {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 41, 32, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 210;
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .modal-proyecto.active { display: flex; }
+
+        .modal-proyecto-content {
+            background: var(--color-bg);
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            border-top: 4px solid var(--color-gold);
+            margin: auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .modal-proyecto {
+                padding: 0;
+                align-items: stretch;
+            }
+            .modal-proyecto-content {
+                margin: 0;
+                min-height: 100vh;
+            }
+        }
+
+        .modal-proyecto-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            font-size: 1.8rem;
+            color: var(--color-bg);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            z-index: 5;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            line-height: 1;
+        }
+
+        .modal-proyecto-close:hover { background: var(--color-gold); color: var(--color-forest); }
+
+        /* Carrusel de fotos */
+        .project-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: var(--color-forest);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-container {
+                aspect-ratio: 4/3;
+            }
+        }
+
+        .carousel-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .carousel-slide.active { opacity: 1; }
+
+        .carousel-slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.6rem;
+            z-index: 4;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: background 0.2s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .carousel-dot.active { background: var(--color-gold); }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(250, 174, 64, 0.9);
+            border: none;
+            color: var(--color-forest);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 4;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .carousel-arrow:hover { background: var(--color-gold); }
+
+        .carousel-prev { left: 0.75rem; }
+        .carousel-next { right: 0.75rem; }
+
+        @media (max-width: 600px) {
+            .carousel-arrow {
+                width: 38px;
+                height: 38px;
+                font-size: 1.3rem;
+            }
+            .carousel-prev { left: 0.5rem; }
+            .carousel-next { right: 0.5rem; }
+        }
+
+        /* Info del proyecto */
+        .project-info-modal {
+            padding: 2.5rem 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .project-info-modal {
+                padding: 1.75rem 1.25rem;
+            }
+        }
+
+        .project-info-modal h2 {
+            font-size: clamp(1.6rem, 5vw, 2.6rem);
+            margin-bottom: 1rem;
+            color: var(--color-forest-dark);
+            line-height: 1.15;
+        }
+
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 1px solid var(--color-line);
+        }
+
+        @media (max-width: 600px) {
+            .project-meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .meta-value {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--color-ink);
+        }
+
+        @media (max-width: 600px) {
+            .meta-value { font-size: 0.95rem; }
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-ink-soft);
+            margin-bottom: 1.75rem;
+        }
+
+        .project-cta-modal {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-modal {
+            padding: 0.95rem 1.75rem;
+            background: var(--color-forest);
+            color: var(--color-bg);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 1px solid var(--color-forest);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .btn-modal {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .btn-modal:hover {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-forest-dark);
+        }
+
+        .modal-content {
+            background: var(--color-bg);
+            max-width: 480px;
+            width: 100%;
+            padding: 3rem 2.5rem;
+            position: relative;
+            border-top: 4px solid var(--color-gold);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--color-ink-soft);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-forest-dark);
+        }
+
+        .modal p {
+            color: var(--color-ink-soft);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .modal .form-input {
+            background: var(--color-bg-warm);
+            border-color: var(--color-line);
+            color: var(--color-ink);
+        }
+
+        .modal .form-input::placeholder { color: var(--color-ink-soft); opacity: 0.5; }
+
+        .modal .form-label { color: var(--color-gold); }
+
+        .modal .form-submit {
+            background: var(--color-forest);
+            color: var(--color-bg);
+        }
+
+        .modal .form-submit:hover { background: var(--color-gold); color: var(--color-forest-dark); }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "CreHA Construcción Residencial",
+        "image": "https://creha.com.mx/logo.jpg",
+        "description": "Construimos casas residenciales a medida en Monterrey desde el terreno hasta el detalle final.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Monterrey",
+            "addressLocality": "Monterrey",
+            "addressRegion": "Nuevo León",
+            "postalCode": "64000",
+            "addressCountry": "MX"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.6866",
+            "longitude": "-100.3161"
+        },
+        "url": "https://creha.com.mx",
+        "telephone": "+5218110000000",
+        "priceRange": "$5,000,000 - $15,000,000+",
+        "areaServed": ["Monterrey", "Carretera Nacional", "Santiago", "Zona Sur", "Sierra Alta", "Valle Alto", "Cumbres"],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/creha.construccion.residencial",
+            "https://www.instagram.com/creha.construccion_residencial/"
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CreHA Construcción Residencial",
+        "url": "https://creha.com.mx",
+        "logo": "https://creha.com.mx/logo.jpg",
+        "description": "Empresa constructora especializada en viviendas residenciales a medida en Monterrey",
+        "foundingDate": "2022",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+5218110000000",
+            "availableLanguage": ["es", "en"]
+        }
+    }
+    </script>
+
+    <!-- Aggregate Rating Schema (Testimonials) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1",
+        "itemReviewed": {
+            "@type": "LocalBusiness",
+            "name": "CreHA Construcción Residencial"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVEGACIÓN
+    ============================================ -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="logo">Cre<span>HA</span></a>
+            <div class="nav-links">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#testimonios">Clientes</a>
+                <a href="#guia">Guía gratuita</a>
+            </div>
+            <a href="#contacto" class="nav-cta">Cotizar</a>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grain"></div>
+        <div class="container hero-inner">
+            <div class="hero-text reveal">
+                <span class="hero-eyebrow">Construcción residencial · Monterrey</span>
+                <h1>Construimos tu <em>casa en Monterrey</em> — desde el terreno hasta el detalle final.</h1>
+                <p class="hero-sub">
+                    Más de 10 proyectos entregados en zona Carretera Nacional y Santiago.
+                    Un solo punto de contacto, ingeniería al frente, y la tranquilidad de saber
+                    que tu casa la construye gente que firma con nombre y apellido.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn-primary">Solicitar cotización →</a>
+                    <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-img-main"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROYECTOS
+    ============================================ -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-eyebrow">Portafolio</span>
+                <h2 class="section-title">Casas que <em>habitan</em>, no solo construidas.</h2>
+                <p class="section-intro">
+                    Cada proyecto refleja una conversación honesta con sus dueños. Fotografía real,
+                    obras documentadas paso a paso. Si quieres, te invitamos a visitar una en proceso.
+                </p>
+            </div>
+            <div class="projects-grid reveal">
+                <!-- Proyecto 1: Residencia Carretera Nacional -->
+                <button class="project project-1" onclick="openProjectModal('proyecto-1')">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-title">Residencia Carretera Nacional</div>
+                        <div class="project-meta">2024 · 480 m² · Llave en mano</div>
+                    </div>
+                </button>
+
+                <!-- Proyecto 2: Casa Santiago -->
+                <button class="project project-2" onclick="openProjectModal('proyecto-2')">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-title">Casa Santiago</div>
+                        <div class="project-meta">2024 · 320 m²</div>
+                    </div>
+                </button>
+
+                <!-- Proyecto 3: Residencia Sierra Alta -->
+                <button class="project project-3" onclick="openProjectModal('proyecto-3')">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-title">Residencia Sierra Alta</div>
+                        <div class="project-meta">2023 · 540 m²</div>
+                    </div>
+                </button>
+
+                <!-- Proyecto 4: Casa Valle Alto -->
+                <button class="project project-4" onclick="openProjectModal('proyecto-4')">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-title">Casa Valle Alto</div>
+                        <div class="project-meta">2023 · 380 m²</div>
+                    </div>
+                </button>
+
+                <!-- Proyecto 5: Residencia Cumbres -->
+                <button class="project project-5" onclick="openProjectModal('proyecto-5')">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-title">Residencia Cumbres</div>
+                        <div class="project-meta">2022 · 410 m²</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CÓMO TRABAJAMOS — 5 PASOS
+    ============================================ -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-eyebrow" style="color: var(--color-gold);">Cómo trabajamos</span>
+                <h2 class="section-title">Cinco pasos. <em>Cero sorpresas.</em></h2>
+                <p class="section-intro">
+                    No vendemos ladrillos — vendemos la tranquilidad de un proceso documentado
+                    donde cada etapa tiene entregables, plazos y aprobaciones por escrito.
+                </p>
+            </div>
+            <div class="process-grid reveal">
+                <div class="step">
+                    <h3 class="step-title">Conversación</h3>
+                    <p class="step-desc">Entendemos el proyecto, presupuesto y tiempos. Si tienes terreno, lo evaluamos. Si no, te orientamos.</p>
+                </div>
+                <div class="step">
+                    <h3 class="step-title">Diseño</h3>
+                    <p class="step-desc">Anteproyecto arquitectónico a la medida. Ajustes hasta que la casa refleje cómo quieres vivirla.</p>
+                </div>
+                <div class="step">
+                    <h3 class="step-title">Propuesta</h3>
+                    <p class="step-desc">Cotización detallada por partidas, calendario de obra y contrato claro. Sin letras chicas.</p>
+                </div>
+                <div class="step">
+                    <h3 class="step-title">Construcción</h3>
+                    <p class="step-desc">Obra documentada con fotos y reportes semanales. Visitas a obra cuando quieras.</p>
+                </div>
+                <div class="step">
+                    <h3 class="step-title">Entrega</h3>
+                    <p class="step-desc">Casa lista para vivir, con garantía de obra y acompañamiento post-entrega.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALES
+    ============================================ -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-eyebrow">Quienes ya construyeron con nosotros</span>
+                <h2 class="section-title">La <em>palabra</em> de quienes ya viven en su casa.</h2>
+            </div>
+            <div class="testimonials-grid reveal">
+                <div class="testimonial">
+                    <p class="testimonial-text">Lo que más valoramos fue tener un solo responsable. Nada de andar coordinando proveedores ni perseguir respuestas — todo el proceso fluyó.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RM</div>
+                        <div>
+                            <div class="testimonial-name">Roberto M.</div>
+                            <div class="testimonial-role">Carretera Nacional · 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">Nos invitaron a visitar una obra en proceso antes de firmar. Ahí supimos que era diferente. Cumplieron tiempos y presupuesto.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LG</div>
+                        <div>
+                            <div class="testimonial-name">Laura G.</div>
+                            <div class="testimonial-role">Santiago · 2023</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">Construir desde cero asusta. Lo que hicieron fue acompañarnos paso a paso, explicando cada decisión técnica con paciencia.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JV</div>
+                        <div>
+                            <div class="testimonial-name">Jorge y Ana V.</div>
+                            <div class="testimonial-role">Valle Alto · 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LEAD MAGNET — GUÍA DEL CONSTRUCTOR
+    ============================================ -->
+    <section class="lead-magnet" id="guia">
+        <div class="container">
+            <div class="lead-magnet-inner">
+                <div class="lead-magnet-content reveal">
+                    <span class="section-eyebrow">Recurso gratuito</span>
+                    <h2>Antes de construir, hay <em>7 preguntas</em> que el 90% no hace.</h2>
+                    <p style="color: var(--color-ink-soft); font-size: 1rem; line-height: 1.7;">
+                        Una guía práctica de 8 páginas con todo lo que debes saber antes de
+                        contratar a una constructora en Monterrey. Sin tecnicismos. Directo al grano.
+                    </p>
+                    <ul class="lead-magnet-list">
+                        <li>Cómo saber si un terreno es apto para construir</li>
+                        <li>Qué incluye (y qué NO) una casa llave en mano</li>
+                        <li>Cómo evitar sobrecostos en obra</li>
+                        <li>Checklist de 10 cosas a verificar antes de firmar</li>
+                    </ul>
+                    <button class="btn-primary" onclick="openModal()">Descargar guía gratis ↓</button>
+                </div>
+                <div class="reveal">
+                    <div class="guide-mockup">
+                        <div class="guide-cover">
+                            <div>
+                                <div class="guide-eyebrow">Guía CreHA · Edición 2026</div>
+                                <h3 class="guide-title">Todo lo que <em>debes saber</em> antes de construir tu casa en Monterrey</h3>
+                                <p class="guide-subtitle">7 preguntas que el 90% de la gente no hace y que pueden costarte muy caro.</p>
+                            </div>
+                            <div class="guide-bottom">— por CreHA Construcción</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FORMULARIO DE CONTACTO
+    ============================================ -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-eyebrow">Hablemos</span>
+                    <h2>Cuéntanos de tu <em>proyecto</em>.</h2>
+                    <p>
+                        Cada casa empieza con una conversación. Llena el formulario o
+                        escríbenos por WhatsApp — respondemos el mismo día.
+                    </p>
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">Ubicación</span>
+                        <span>Monterrey, Nuevo León</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">Zona</span>
+                        <span>Carretera Nacional · Santiago · Zona Sur</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-detail-label">Horario</span>
+                        <span>Lun – Vie · 9:00 — 18:00</span>
+                    </div>
+                </div>
+
+                <form class="form reveal" id="contactForm">
+                    <h3 class="form-title">Solicita tu cotización</h3>
+                    <p class="form-subtitle">Te contactamos en menos de 24 horas hábiles · Respuesta garantizada</p>
+
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nombre completo</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Teléfono</label>
+                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="81 0000 0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">¿Ya tienes terreno?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="terreno-si" name="terreno" value="si" required>
+                                <label for="terreno-si">Sí</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="terreno-no" name="terreno" value="no">
+                                <label for="terreno-no">Aún no</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="presupuesto">Presupuesto aproximado</label>
+                        <select class="form-select" id="presupuesto" name="presupuesto" required>
+                            <option value="">Selecciona un rango</option>
+                            <option value="5-7">$5M – $7M MXN</option>
+                            <option value="7-10">$7M – $10M MXN</option>
+                            <option value="10-15">$10M – $15M MXN</option>
+                            <option value="15+">Más de $15M MXN</option>
+                            <option value="por-definir">Aún por definir</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit">Enviar solicitud →</button>
+                    <p class="form-note">Tus datos están seguros. Solo los usamos para contactarte.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         IMPORTANTE: Reemplazar las URLs con tus redes sociales reales
+    ============================================ -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-logo">Cre<span>HA</span> Construcción Residencial</div>
+            
+            <!-- Redes Sociales -->
+            <div class="social-icons">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/creha.construccion.residencial" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/creha.construccion_residencial/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-text">© 2026 CreHA · Monterrey, Nuevo León · Todos los derechos reservados</div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         WHATSAPP FLOTANTE
+         IMPORTANTE: Reemplazar el número 5218110000000
+         por el número real de WhatsApp Business
+    ============================================ -->
+    <a href="https://wa.me/5218110000000?text=Hola%20CreHA%2C%20me%20interesa%20construir%20mi%20casa" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <span class="whatsapp-tooltip">Escríbenos por WhatsApp</span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- ============================================
+         MODAL DESCARGA GUÍA
+    ============================================ -->
+    <div class="modal" id="leadModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">×</button>
+            <h3>Descarga tu guía gratis</h3>
+            <p>La guía de 8 páginas con las 7 preguntas que debes hacer antes de construir tu casa.</p>
+            <p style="font-size: 0.85rem; color: var(--color-ink-soft); margin: 1rem 0;">Te enviaremos el PDF directo a tu WhatsApp en menos de 5 minutos — sin spam, sin compromisos.</p>
+            <form id="leadForm">
+                <div class="form-group">
+                    <label class="form-label" for="lead-name">Nombre</label>
+                    <input class="form-input" type="text" id="lead-name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="lead-phone">WhatsApp</label>
+                    <input class="form-input" type="tel" id="lead-phone" placeholder="81 0000 0000" required>
+                </div>
+                <button type="submit" class="form-submit">Enviarme la guía →</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODALES DE PROYECTOS
+    ============================================ -->
+
+    <!-- Proyecto 1: Residencia Carretera Nacional -->
+    <div class="modal-proyecto" id="proyecto-1-modal">
+        <div class="modal-proyecto-content">
+            <button class="modal-proyecto-close" onclick="closeProjectModal('proyecto-1')" aria-label="Cerrar">×</button>
+            
+            <div class="project-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%232c3e2d%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23c9a866%22 opacity=%220.5%22%3EFoto 1 - Residencia Carretera Nacional%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%223d4a40%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23c9a866%22 opacity=%220.5%22%3EFoto 2 - Residencia Carretera Nacional%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%224a5d4a%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23c9a866%22 opacity=%220.5%22%3EFoto 3 - Residencia Carretera Nacional%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%225a6d5a%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23c9a866%22 opacity=%220.5%22%3EFoto 4 - Residencia Carretera Nacional%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" onclick="changeSlide('proyecto-1', -1)">‹</button>
+                <button class="carousel-arrow carousel-next" onclick="changeSlide('proyecto-1', 1)">›</button>
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="goToSlide('proyecto-1', 0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-1', 1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-1', 2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-1', 3)"></button>
+                </div>
+            </div>
+
+            <div class="project-info-modal">
+                <h2>Residencia Carretera Nacional</h2>
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Ubicación</span>
+                        <span class="meta-value">Carretera Nacional</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Superficie</span>
+                        <span class="meta-value">480 m²</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tipo</span>
+                        <span class="meta-value">Llave en mano</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Residencia moderna en zona de alto valor. Diseño contemporáneo que aprovecha luz natural. Acabados de primera calidad, con especial énfasis en espacios abiertos y circulación fluida. Incluye áreas verdes y estacionamiento techado.
+                </p>
+                <div class="project-cta-modal">
+                    <a href="#contacto" class="btn-modal" onclick="closeProjectModal('proyecto-1')">Solicitar cotización similar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyecto 2: Casa Santiago -->
+    <div class="modal-proyecto" id="proyecto-2-modal">
+        <div class="modal-proyecto-content">
+            <button class="modal-proyecto-close" onclick="closeProjectModal('proyecto-2')" aria-label="Cerrar">×</button>
+            
+            <div class="project-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%221a1819%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 1 - Casa Santiago%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%222a2727%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 2 - Casa Santiago%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%223a3737%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 3 - Casa Santiago%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%224a4747%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 4 - Casa Santiago%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" onclick="changeSlide('proyecto-2', -1)">‹</button>
+                <button class="carousel-arrow carousel-next" onclick="changeSlide('proyecto-2', 1)">›</button>
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="goToSlide('proyecto-2', 0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-2', 1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-2', 2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-2', 3)"></button>
+                </div>
+            </div>
+
+            <div class="project-info-modal">
+                <h2>Casa Santiago</h2>
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Ubicación</span>
+                        <span class="meta-value">Santiago</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Superficie</span>
+                        <span class="meta-value">320 m²</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tipo</span>
+                        <span class="meta-value">Residencial</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Vivienda práctica y confortable en zona céntrica de Santiago. Distribución inteligente optimizando cada metro cuadrado. Acabados modernos con foco en confort familiar. Todas las comodidades en un espacio compacto y eficiente.
+                </p>
+                <div class="project-cta-modal">
+                    <a href="#contacto" class="btn-modal" onclick="closeProjectModal('proyecto-2')">Solicitar cotización similar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyecto 3: Residencia Sierra Alta -->
+    <div class="modal-proyecto" id="proyecto-3-modal">
+        <div class="modal-proyecto-content">
+            <button class="modal-proyecto-close" onclick="closeProjectModal('proyecto-3')" aria-label="Cerrar">×</button>
+            
+            <div class="project-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%234d5d3b%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 1 - Residencia Sierra Alta%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%235d6d4b%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 2 - Residencia Sierra Alta%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%236d7d5b%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 3 - Residencia Sierra Alta%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%237d8d6b%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 4 - Residencia Sierra Alta%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" onclick="changeSlide('proyecto-3', -1)">‹</button>
+                <button class="carousel-arrow carousel-next" onclick="changeSlide('proyecto-3', 1)">›</button>
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="goToSlide('proyecto-3', 0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-3', 1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-3', 2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-3', 3)"></button>
+                </div>
+            </div>
+
+            <div class="project-info-modal">
+                <h2>Residencia Sierra Alta</h2>
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Ubicación</span>
+                        <span class="meta-value">Sierra Alta</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2023</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Superficie</span>
+                        <span class="meta-value">540 m²</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tipo</span>
+                        <span class="meta-value">Premium</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Residencia de lujo en exclusiva zona de Sierra Alta. Espacios amplios con vistas privilegiadas. Acabados de primer nivel con materiales importados. Diseño arquitectónico distinguido que maximiza la iluminación natural y la ventilación cruzada. Área de entretenimiento integrada.
+                </p>
+                <div class="project-cta-modal">
+                    <a href="#contacto" class="btn-modal" onclick="closeProjectModal('proyecto-3')">Solicitar cotización similar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyecto 4: Casa Valle Alto -->
+    <div class="modal-proyecto" id="proyecto-4-modal">
+        <div class="modal-proyecto-content">
+            <button class="modal-proyecto-close" onclick="closeProjectModal('proyecto-4')" aria-label="Cerrar">×</button>
+            
+            <div class="project-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%231a1819%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 1 - Casa Valle Alto%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%232a2727%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 2 - Casa Valle Alto%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%233a3737%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 3 - Casa Valle Alto%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%234a4747%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 4 - Casa Valle Alto%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" onclick="changeSlide('proyecto-4', -1)">‹</button>
+                <button class="carousel-arrow carousel-next" onclick="changeSlide('proyecto-4', 1)">›</button>
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="goToSlide('proyecto-4', 0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-4', 1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-4', 2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-4', 3)"></button>
+                </div>
+            </div>
+
+            <div class="project-info-modal">
+                <h2>Casa Valle Alto</h2>
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Ubicación</span>
+                        <span class="meta-value">Valle Alto</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2023</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Superficie</span>
+                        <span class="meta-value">380 m²</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tipo</span>
+                        <span class="meta-value">Residencial</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Casa contemporánea en privilegiada ubicación de Valle Alto. Diseño moderno con énfasis en funcionalidad y elegancia. Interiores luminosos con distribución eficiente. Acabados cuidados y detalles arquitectónicos que reflejan calidad. Perfecta para familia que busca confort y estilo.
+                </p>
+                <div class="project-cta-modal">
+                    <a href="#contacto" class="btn-modal" onclick="closeProjectModal('proyecto-4')">Solicitar cotización similar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyecto 5: Residencia Cumbres -->
+    <div class="modal-proyecto" id="proyecto-5-modal">
+        <div class="modal-proyecto-content">
+            <button class="modal-proyecto-close" onclick="closeProjectModal('proyecto-5')" aria-label="Cerrar">×</button>
+            
+            <div class="project-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%233d4a40%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 1 - Residencia Cumbres%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%234d5a50%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 2 - Residencia Cumbres%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%235d6a60%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 3 - Residencia Cumbres%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="carousel-slide-img" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%236d7a70%22/%3E%3Ctext x=%22400%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2248%22 fill=%22%23faae40%22 opacity=%220.5%22%3EFoto 4 - Residencia Cumbres%3C/text%3E%3C/svg%3E')"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" onclick="changeSlide('proyecto-5', -1)">‹</button>
+                <button class="carousel-arrow carousel-next" onclick="changeSlide('proyecto-5', 1)">›</button>
+                <div class="carousel-controls">
+                    <button class="carousel-dot active" onclick="goToSlide('proyecto-5', 0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-5', 1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-5', 2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide('proyecto-5', 3)"></button>
+                </div>
+            </div>
+
+            <div class="project-info-modal">
+                <h2>Residencia Cumbres</h2>
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Ubicación</span>
+                        <span class="meta-value">Cumbres</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2022</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Superficie</span>
+                        <span class="meta-value">410 m²</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tipo</span>
+                        <span class="meta-value">Premium</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Residencia de clase alta en la exclusiva zona de Cumbres. Arquitectura de líneas limpias con amplios espacios. Materiales de la más alta calidad. Sala de entretenimiento, terraza equipada y acabados sobrios que hablan por sí solos. Una casa para quien aprecia los detalles.
+                </p>
+                <div class="project-cta-modal">
+                    <a href="#contacto" class="btn-modal" onclick="closeProjectModal('proyecto-5')">Solicitar cotización similar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // NAV CON FONDO AL HACER SCROLL
+        // ============================================
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // ============================================
+        // ANIMACIONES DE ENTRADA AL HACER SCROLL
+        // ============================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ============================================
+        // MODAL LEAD MAGNET
+        // ============================================
+        function openModal() {
+            document.getElementById('leadModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('leadModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('leadModal').addEventListener('click', (e) => {
+            if (e.target.id === 'leadModal') closeModal();
+        });
+
+        // ============================================
+        // FORMULARIO DE CONTACTO PRINCIPAL
+        // Redirige a WhatsApp con el mensaje pre-armado
+        // IMPORTANTE: Reemplazar 5218110000000 con el número real
+        // ============================================
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const terreno = document.querySelector('input[name="terreno"]:checked').value;
+            const presupuesto = document.getElementById('presupuesto').value;
+            const submitBtn = e.target.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+
+            // Feedback visual
+            submitBtn.textContent = 'Conectando...';
+            submitBtn.disabled = true;
+
+            const mensaje = `Hola CreHA, soy ${name}.%0A` +
+                           `Mi teléfono: ${phone}%0A` +
+                           `${terreno === 'si' ? 'Ya tengo terreno' : 'Aún no tengo terreno'}%0A` +
+                           `Presupuesto: ${presupuesto} MXN%0A%0A` +
+                           `Me gustaría recibir una cotización.`;
+
+            // Tracking de conversión (descomentar cuando GA y Pixel estén activos)
+            // gtag('event', 'lead_form_submit', { event_category: 'engagement' });
+            // fbq('track', 'Lead');
+
+            setTimeout(() => {
+                window.open(`https://wa.me/5218110000000?text=${mensaje}`, '_blank');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                e.target.reset();
+            }, 500);
+        });
+
+        // ============================================
+        // FORMULARIO LEAD MAGNET (descarga guía)
+        // ============================================
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('lead-name').value;
+            const phone = document.getElementById('lead-phone').value;
+            const submitBtn = e.target.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+
+            // Feedback visual
+            submitBtn.textContent = 'Enviando solicitud...';
+            submitBtn.disabled = true;
+
+            const mensaje = `Hola CreHA, soy ${name} (tel: ${phone}). Me gustaría recibir la Guía del Constructor. Gracias.`;
+
+            // Tracking de conversión
+            // gtag('event', 'lead_magnet_download', { event_category: 'engagement' });
+            // fbq('track', 'Lead', { content_name: 'Guia del Constructor' });
+
+            setTimeout(() => {
+                window.open(`https://wa.me/5218110000000?text=${encodeURIComponent(mensaje)}`, '_blank');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                closeModal();
+            }, 500);
+        });
+
+        // ============================================
+        // MODALES DE PROYECTOS
+        // ============================================
+        function openProjectModal(projectId) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeProjectModal(projectId) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Cerrar modal al hacer click fuera del contenido
+        document.querySelectorAll('.modal-proyecto').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    const projectId = modal.id.replace('-modal', '');
+                    closeProjectModal(projectId);
+                }
+            });
+        });
+
+        // ============================================
+        // CARRUSEL DE FOTOS EN PROYECTOS
+        // ============================================
+        function changeSlide(projectId, direction) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            const slides = modal.querySelectorAll('.carousel-slide');
+            const activeSlide = modal.querySelector('.carousel-slide.active');
+            const currentIndex = Array.from(slides).indexOf(activeSlide);
+            const newIndex = (currentIndex + direction + slides.length) % slides.length;
+            goToSlide(projectId, newIndex);
+        }
+
+        function goToSlide(projectId, index) {
+            const modal = document.getElementById(`${projectId}-modal`);
+            const slides = modal.querySelectorAll('.carousel-slide');
+            const dots = modal.querySelectorAll('.carousel-dot');
+            
+            // Remover clase active de todos
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Agregar clase active al slide y dot seleccionado
+            if (slides[index]) slides[index].classList.add('active');
+            if (dots[index]) dots[index].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
