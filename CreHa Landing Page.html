@@ -149,6 +149,12 @@
             padding: 0.875rem 0;
         }
 
+        .nav.menu-open {
+            background: #faf7f2;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
         .nav-inner {
             display: flex;
             justify-content: space-between;
@@ -206,7 +212,7 @@
             cursor: pointer;
             padding: 0;
             position: relative;
-            z-index: 101;
+            z-index: 103;
         }
 
         .menu-toggle span {
@@ -241,13 +247,13 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: var(--color-bg);
+                background: #faf7f2;
                 padding: 6rem 2rem 2rem;
                 gap: 1.5rem;
                 font-size: 1.1rem;
                 transform: translateX(100%);
                 transition: transform 0.3s ease;
-                z-index: 99;
+                z-index: 102;
             }
 
             .nav-links.active {
@@ -2346,19 +2352,34 @@
         // ============================================
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
+        const navEl = document.getElementById('nav');
 
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
+            navEl.classList.toggle('menu-open');
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Cerrar menú al hacer clic en un link
+        // Cerrar menú al hacer clic en un link y hacer scroll a la sección
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+
+                // Cerrar el menú primero
                 menuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
+                navEl.classList.remove('menu-open');
                 document.body.style.overflow = '';
+
+                // Esperar a que termine la animación del menú y luego hacer scroll
+                setTimeout(() => {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 350);
             });
         });
 
