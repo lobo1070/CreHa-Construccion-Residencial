@@ -196,8 +196,74 @@
 
         .nav-cta:hover { background: var(--color-gold); color: var(--color-forest-dark); }
 
+        /* Menú hamburguesa - solo móvil */
+        .menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            z-index: 101;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-forest);
+            margin: 5px auto;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+
+            .nav-links {
+                display: flex !important;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--color-bg);
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                font-size: 1.1rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                z-index: 99;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links a {
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--color-line);
+                font-size: 1rem;
+            }
+
+            .nav-cta {
+                font-size: 0.75rem;
+                padding: 0.55rem 1.1rem;
+            }
         }
 
         /* ============================================
@@ -242,6 +308,45 @@
 
         @media (max-width: 900px) {
             .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 7rem 0 3rem;
+            }
+
+            .hero-inner { gap: 2rem; }
+
+            .hero-eyebrow {
+                font-size: 0.7rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-sub {
+                font-size: 0.95rem;
+                margin-bottom: 1.75rem;
+            }
+
+            .hero-ctas { gap: 0.75rem; }
+
+            .hero-visual {
+                max-height: 320px;
+                aspect-ratio: 16/10;
+                order: 2;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 1rem 1.5rem;
+                font-size: 0.78rem;
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         .hero-eyebrow {
@@ -367,6 +472,13 @@
             position: relative;
         }
 
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+            .section-title { font-size: 1.8rem; margin-bottom: 1rem; }
+            .section-intro { font-size: 0.95rem; margin-bottom: 2rem; }
+            .section-eyebrow { font-size: 0.7rem; margin-bottom: 1rem; }
+        }
+
         .section-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -478,7 +590,32 @@
         .project:nth-child(5) { grid-column: span 3; }
 
         @media (max-width: 768px) {
-            .project { grid-column: span 12 !important; }
+            .projects-grid {
+                display: flex;
+                grid-template-columns: none;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+            }
+
+            .project {
+                grid-column: auto !important;
+                flex: 0 0 80%;
+                scroll-snap-align: start;
+                min-width: 80%;
+            }
+
+            .project-img { aspect-ratio: 4/3; }
+
+            .projects-grid::-webkit-scrollbar { height: 4px; }
+            .projects-grid::-webkit-scrollbar-thumb { background: var(--color-gold); }
         }
 
         /* Placeholders de proyecto con SVG diferentes */
@@ -515,8 +652,12 @@
             .process-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        @media (max-width: 600px) {
-            .process-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .process-grid { grid-template-columns: 1fr; gap: 0.5rem; margin-top: 2rem; }
+            .step { padding: 1.5rem 0; }
+            .step::before { font-size: 2rem; margin-bottom: 0.5rem; }
+            .step-title { font-size: 1.25rem; }
+            .step-desc { font-size: 0.9rem; }
         }
 
         .step {
@@ -569,6 +710,12 @@
 
         @media (max-width: 900px) {
             .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid { gap: 1.25rem; }
+            .testimonial { padding: 2rem 1.5rem; }
+            .testimonial-text { font-size: 1.05rem; }
         }
 
         .testimonial {
@@ -652,6 +799,23 @@
 
         @media (max-width: 900px) {
             .lead-magnet-inner { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .lead-magnet-inner { gap: 2.5rem; }
+
+            .guide-mockup {
+                transform: none;
+                max-width: 280px;
+            }
+
+            .guide-mockup:hover { transform: scale(1.02); }
+
+            .guide-cover { padding: 2.25rem 1.5rem; }
+
+            .guide-title { font-size: 1.35rem; }
+
+            .lead-magnet-content h2 { font-size: 1.7rem; }
         }
 
         .lead-magnet-content h2 {
@@ -773,6 +937,23 @@
 
         @media (max-width: 900px) {
             .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { gap: 2rem; }
+            .contact-info h2 { font-size: 1.8rem; }
+            .contact-detail {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                padding: 0.75rem 0;
+            }
+            .form-input, .form-select {
+                font-size: 16px;
+                padding: 0.85rem 0.9rem;
+            }
+            .form-submit { padding: 1.1rem; }
+            .radio-option label { padding: 0.85rem 0.5rem; font-size: 0.85rem; }
         }
 
         .contact-info h2 {
@@ -1495,13 +1676,18 @@
     <nav class="nav" id="nav">
         <div class="container nav-inner">
             <a href="#" class="logo">Cre<span>HA</span></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="#proyectos">Proyectos</a>
                 <a href="#proceso">Proceso</a>
                 <a href="#testimonios">Clientes</a>
                 <a href="#guia">Guía gratuita</a>
             </div>
             <a href="#contacto" class="nav-cta">Cotizar</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -2155,6 +2341,27 @@
     </div>
 
     <script>
+        // ============================================
+        // MENÚ HAMBURGUESA MÓVIL
+        // ============================================
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Cerrar menú al hacer clic en un link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
         // ============================================
         // NAV CON FONDO AL HACER SCROLL
         // ============================================
