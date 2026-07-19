@@ -21,16 +21,18 @@ Para cada solicitud nueva, en este orden:
 
 ## Dominios activos
 
-| Dominio | Subagente | Sub-agentes propios |
-|---|---|---|
-| Bibliotecario (repositorio de proyectos) | `bibliotecario` | — |
-| Automatización | `automatizacion` | `integraciones`, `qa-workflows` |
-| Análisis de Datos | `analisis-datos` | `visualizacion`, `insights-narrativa` |
-| Data Engineering | `data-engineering` | `modelado`, `pipeline-etl` |
+| Dominio | Subagente |
+|---|---|
+| Bibliotecario (repositorio de proyectos) | `bibliotecario` |
+| Automatización | `automatizacion` |
+| Análisis de Datos | `analisis-datos` |
+| Data Engineering | `data-engineering` |
+
+Cada agente de dominio cubre él mismo, de forma inline, sus distintas funciones internas (ej. `automatizacion` cubre integraciones y QA de workflows sin sub-agentes propios). **No crees sub-agentes dentro de un dominio hasta que un proyecto real demuestre que el archivo del dominio se volvió inmanejable** — construir esa sub-estructura antes de tener evidencia de necesidad es la forma más común en que este sistema se vuelve paja.
 
 Agregar un dominio nuevo = una línea nueva aquí + un archivo en `.claude/agents/` + los skills que necesite. El Maestro, el Bibliotecario, los hooks y el skill de Empaquetado se reutilizan tal cual.
 
-**Regla de validación de crecimiento:** no agregar dominios nuevos hasta que los 3 actuales completen al menos un proyecto real de punta a punta.
+**Regla de validación de crecimiento:** no agregar dominios nuevos (ni sub-agentes dentro de uno existente) hasta que los 3 actuales completen al menos un proyecto real de punta a punta.
 
 ## Regla de escalamiento de modelo
 
@@ -38,8 +40,20 @@ Ningún subagente escala su propio modelo. Si un subagente determina que una tar
 
 ## Puertas de autorización
 
-- Las acciones irreversibles (borrado fuera del workspace del proyecto, `DROP`/`DELETE`/`TRUNCATE` contra bases personales, sobrescritura de workflows existentes de n8n, gasto en APIs de pago) están interceptadas por un hook `PreToolUse` determinista — no dependen de que tú o un subagente se acuerden de pedir permiso.
-- Cada delegación y su resultado quedan registrados automáticamente en `bitacora/ejecuciones.md` vía un hook `SubagentStop` — no es tu responsabilidad escribir ahí.
+Las acciones irreversibles (borrado fuera del workspace del proyecto, `DROP`/`DELETE`/`TRUNCATE` contra bases personales, sobrescritura de workflows existentes de n8n, gasto en APIs de pago) están interceptadas por un hook `PreToolUse` determinista — no dependen de que tú o un subagente se acuerden de pedir permiso.
+
+El registro de qué se hizo en cada proyecto vive directamente en `proyectos/*.md` (responsabilidad del Bibliotecario, por hito) — no hay un hook de bitácora separado; se probó y se quitó porque no aportaba información que `proyectos/` no tuviera ya.
+
+## Por qué esta arquitectura da ventaja frente a una sesión nueva en blanco
+
+Esto es lo que hace que valga la pena delegar aquí en vez de simplemente abrir Claude Code o Claude normal:
+
+1. **Memoria que persiste entre sesiones y se recupera sola.** Un hook `SessionStart` escanea `proyectos/*.md` al abrir sesión y te resume qué proyectos siguen `activo` — tú nunca tienes que preguntarle a Hector "¿en qué estábamos?" ni él tiene que repetirlo.
+2. **Criterio y errores que se acumulan por dominio.** Los skills de cada dominio tienen una sección "Errores conocidos" que se consolida (no solo se apendiza) tras cada retrospectiva de cierre — la segunda vez que aparece un problema ya conocido, no se vuelve a cometer el mismo error.
+3. **Guardrails deterministas, no promesas de prompt.** El hook de seguridad no se puede "convencer" de saltarse una confirmación — a diferencia de pedirle a un modelo en una sesión suelta que "tenga cuidado".
+4. **Separación personal/trabajo estructural**, no algo que dependa de que te acuerdes de mencionarlo cada vez.
+
+Si en algún momento una de estas cuatro cosas deja de ser cierta en la práctica (el resumen de sesión no se usa, los skills no acumulan nada, etc.), es señal de que esa pieza se volvió ceremonia y hay que simplificarla o quitarla — no de que haya que agregar más estructura encima.
 
 ## Modelo de esta sesión
 
